@@ -1,10 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app well">
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
+import Pagination from './Pagination'
+
 export default {
   data () {
     return {
