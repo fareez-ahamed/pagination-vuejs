@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Util from '../services/Util'
+import Util from './services/Util'
 
 export default {
 
@@ -25,8 +25,7 @@ export default {
     // Current Page
     currentPage: {
       type: Number,
-      required: true,
-      twoWay: true
+      required: true
     },
     // Total page
     totalPages: Number,
@@ -72,8 +71,7 @@ export default {
 
   methods: {
     pageChanged (pageNum) {
-      this.currentPage = pageNum
-      this.$dispatch('page-changed', pageNum)
+      this.$emit('page-changed', pageNum)
     },
 
     activePage (pageNum) {
